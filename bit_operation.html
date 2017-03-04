@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+数据和逻辑的载体是一串二进制数字，而由于排列组合便能赋予许多内涵，就像单个的英文字母是没有意义的，但他们组合在一起就变得丰富了。
+
+常用的位操作有 与（&）、 或（|）、非（！） 、异或（^）
+他们的规则就不详述了
+这里提供一种比较舒服的思维
+将二进制流赋予数学集合的内涵，里面不同位置代表不同的元素，显然0代表没有，1代表有，因此与操作就是集合间求交集，或操作就是求并集，非是求补集，最后异或便是求集合间不同时存在的元素。这样，就能通过集合的模式考虑问题
+
+当然二进制不单单能赋予这样的意义（代表数字，集合），这是一个高度抽象的数据，具象得当是一个强力的武器。
+
+
+位操作优化问题实现
+在c语言中，你当然写个这样一个交换的函数，或许差不多这样：
+void swap(int *a,int b)
+{
+       int temp=*a;
+       *a=*b;
+       *b=temp;
+}
+但是这有更好的实现将a，b看做两个集合现在要交换他们的元素。
+a=a独+s共   b=b独+s共
+显然有 a=（a Xor b）Xor b
+     *a=*a ^ *b
+     *b=*a ^ *b
+     *a=*a ^ *b
+是不是很炫酷
+
+最后一个点是移位操作>>,<<
+
+*  逻辑移位 
+*  算术移位 需要考虑符号位（-）
+一些可能的坑是  运算级词余加法、移位若超过字长是未定义行为
+
+一道有趣的题：
+若给长度32的二进制数字，计算其中1的个数？
+如果不能使用循环结构呢？
+
+（提示 一次进行多个计算）
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<p>数据和逻辑的载体是一串二进制数字，而由于排列组合便能赋予许多内涵，就像单个的英文字母是没有意义的，但他们组合在一起就变得丰富了。</p>
+
+<p>常用的位操作有 与（&amp;）、 或（|）、非（！） 、异或（^）
+他们的规则就不详述了
+这里提供一种比较舒服的思维
+将二进制流赋予数学集合的内涵，里面不同位置代表不同的元素，显然0代表没有，1代表有，因此与操作就是集合间求交集，或操作就是求并集，非是求补集，最后异或便是求集合间不同时存在的元素。这样，就能通过集合的模式考虑问题</p>
+
+<p>当然二进制不单单能赋予这样的意义（代表数字，集合），这是一个高度抽象的数据，具象得当是一个强力的武器。</p>
+
+<p>位操作优化问题实现
+在c语言中，你当然写个这样一个交换的函数，或许差不多这样：
+void swap(int <em>a,int b)
+{
+       int temp=</em>a;
+       <em>a=</em>b;
+       <em>b=temp;
+}
+但是这有更好的实现将a，b看做两个集合现在要交换他们的元素。
+a=a独+s共   b=b独+s共
+显然有 a=（a Xor b）Xor b
+     *a=</em>a ^ <em>b
+     *b=</em>a ^ <em>b
+     *a=</em>a ^ *b
+是不是很炫酷</p>
+
+<p>最后一个点是移位操作&gt;&gt;,&lt;&lt;</p>
+
+<ul>
+<li>逻辑移位 </li>
+<li>算术移位 需要考虑符号位（-）
+一些可能的坑是  运算级词余加法、移位若超过字长是未定义行为</li>
+</ul>
+
+<p>一道有趣的题：
+若给长度32的二进制数字，计算其中1的个数？
+如果不能使用循环结构呢？</p>
+
+<p>（提示 一次进行多个计算）</p>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "bit_operation.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
