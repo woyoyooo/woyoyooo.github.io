@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+## 傅里叶变换
+[傅里叶变换的理解](https://zhuanlan.zhihu.com/p/19763358?columnSlug=wille)
+
+[离散傅里叶变换的推导](https://zhuanlan.zhihu.com/p/23607336)
+
+任何一个周期为T的周期函数都能用正弦和余弦的级数表示出来，这就是傅里叶级数
+$f(x)=\frac {a_ 0} {2} + {\sum_{n=1}^\infty a _n * \cos nwx + b _n* \sin nwx }  , T =  \frac {2 \pi}{w}$
+
+明显看出，w越大，周期越小；
+
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<h2 id="">傅里叶变换</h2>
+
+<p><a href="https://zhuanlan.zhihu.com/p/19763358?columnSlug=wille">傅里叶变换的理解</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/23607336">离散傅里叶变换的推导</a></p>
+
+<p>任何一个周期为T的周期函数都能用正弦和余弦的级数表示出来，这就是傅里叶级数
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-506-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>f</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mfrac><msub><mi>a</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>+</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><munderover><mo>&amp;#x2211;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant=&quot;normal&quot;>&amp;#x221E;</mi></munderover><msub><mi>a</mi><mi>n</mi></msub><mo>&amp;#x2217;</mo><mi>cos</mi><mo>&amp;#x2061;</mo><mi>n</mi><mi>w</mi><mi>x</mi><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mo>&amp;#x2217;</mo><mi>sin</mi><mo>&amp;#x2061;</mo><mi>n</mi><mi>w</mi><mi>x</mi></mrow><mo>,</mo><mi>T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>&amp;#x03C0;</mi></mrow><mi>w</mi></mfrac></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16158" style="width: 28.902em; display: inline-block;"><span style="display: inline-block; position: relative; width: 23.102em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.252em 1023.1em 2.802em -999.998em); top: -2.298em; left: 0em;"><span class="mrow" id="MathJax-Span-16159"><span class="mi" id="MathJax-Span-16160" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.053em;"></span></span><span class="mo" id="MathJax-Span-16161" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-16162" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-16163" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-16164" style="font-family: MathJax_Main; padding-left: 0.302em;">=</span><span class="mfrac" id="MathJax-Span-16165" style="padding-left: 0.302em;"><span style="display: inline-block; position: relative; width: 0.802em; height: 0px; margin-right: 0.102em; margin-left: 0.102em;"><span style="position: absolute; clip: rect(3.552em 1000.7em 4.252em -999.998em); top: -4.498em; left: 50%; margin-left: -0.348em;"><span class="msubsup" id="MathJax-Span-16166"><span style="display: inline-block; position: relative; width: 0.703em; height: 0px;"><span style="position: absolute; clip: rect(3.552em 1000.35em 4.152em -999.998em); top: -3.998em; left: 0em;"><span class="mi" id="MathJax-Span-16167" style="font-size: 70.7%; font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; top: -3.897em; left: 0.352em;"><span class="mn" id="MathJax-Span-16168" style="font-size: 50%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(3.402em 1000.3em 4.152em -999.998em); top: -3.647em; left: 50%; margin-left: -0.198em;"><span class="mn" id="MathJax-Span-16169" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(0.853em 1000.8em 1.203em -999.998em); top: -1.248em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.802em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.052em;"></span></span></span></span><span class="mo" id="MathJax-Span-16170" style="font-family: MathJax_Main; padding-left: 0.202em;">+</span><span class="texatom" id="MathJax-Span-16171" style="padding-left: 0.202em;"><span class="mrow" id="MathJax-Span-16172"><span class="munderover" id="MathJax-Span-16173"><span style="display: inline-block; position: relative; width: 2.452em; height: 0px;"><span style="position: absolute; clip: rect(3.103em 1001em 4.402em -999.998em); top: -3.998em; left: 0em;"><span class="mo" id="MathJax-Span-16174" style="font-family: MathJax_Size1; vertical-align: 0em;">∑</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(3.552em 1000.8em 4.152em -999.998em); top: -4.498em; left: 1.052em;"><span class="mi" id="MathJax-Span-16175" style="font-size: 70.7%; font-family: MathJax_Main;">∞</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(3.402em 1001.4em 4.152em -999.998em); top: -3.698em; left: 1.052em;"><span class="texatom" id="MathJax-Span-16176"><span class="mrow" id="MathJax-Span-16177"><span class="mi" id="MathJax-Span-16178" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-16179" style="font-size: 70.7%; font-family: MathJax_Main;">=</span><span class="mn" id="MathJax-Span-16180" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-16181" style="padding-left: 0.152em;"><span style="display: inline-block; position: relative; width: 1.052em; height: 0px;"><span style="position: absolute; clip: rect(3.402em 1000.5em 4.152em -999.998em); top: -3.998em; left: 0em;"><span class="mi" id="MathJax-Span-16182" style="font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; top: -3.848em; left: 0.552em;"><span class="mi" id="MathJax-Span-16183" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span></span></span><span class="mo" id="MathJax-Span-16184" style="font-family: MathJax_Main; padding-left: 0.202em;">∗</span><span class="mi" id="MathJax-Span-16185" style="font-family: MathJax_Main; padding-left: 0.202em;">cos</span><span class="mo" id="MathJax-Span-16186"></span><span class="mi" id="MathJax-Span-16187" style="font-family: MathJax_Math-italic; padding-left: 0.152em;">n</span><span class="mi" id="MathJax-Span-16188" style="font-family: MathJax_Math-italic;">w</span><span class="mi" id="MathJax-Span-16189" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-16190" style="font-family: MathJax_Main; padding-left: 0.202em;">+</span><span class="msubsup" id="MathJax-Span-16191" style="padding-left: 0.202em;"><span style="display: inline-block; position: relative; width: 0.953em; height: 0px;"><span style="position: absolute; clip: rect(3.152em 1000.4em 4.152em -999.998em); top: -3.998em; left: 0em;"><span class="mi" id="MathJax-Span-16192" style="font-family: MathJax_Math-italic;">b</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; top: -3.848em; left: 0.453em;"><span class="mi" id="MathJax-Span-16193" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span></span></span><span class="mo" id="MathJax-Span-16194" style="font-family: MathJax_Main; padding-left: 0.202em;">∗</span><span class="mi" id="MathJax-Span-16195" style="font-family: MathJax_Main; padding-left: 0.202em;">sin</span><span class="mo" id="MathJax-Span-16196"></span><span class="mi" id="MathJax-Span-16197" style="font-family: MathJax_Math-italic; padding-left: 0.152em;">n</span><span class="mi" id="MathJax-Span-16198" style="font-family: MathJax_Math-italic;">w</span><span class="mi" id="MathJax-Span-16199" style="font-family: MathJax_Math-italic;">x</span></span></span><span class="mo" id="MathJax-Span-16200" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-16201" style="font-family: MathJax_Math-italic; padding-left: 0.152em;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.102em;"></span></span><span class="mo" id="MathJax-Span-16202" style="font-family: MathJax_Main; padding-left: 0.302em;">=</span><span class="mfrac" id="MathJax-Span-16203" style="padding-left: 0.302em;"><span style="display: inline-block; position: relative; width: 0.903em; height: 0px; margin-right: 0.102em; margin-left: 0.102em;"><span style="position: absolute; clip: rect(3.402em 1000.75em 4.152em -999.998em); top: -4.397em; left: 50%; margin-left: -0.398em;"><span class="mrow" id="MathJax-Span-16204"><span class="mn" id="MathJax-Span-16205" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span class="mi" id="MathJax-Span-16206" style="font-size: 70.7%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(3.552em 1000.5em 4.152em -999.998em); top: -3.647em; left: 50%; margin-left: -0.247em;"><span class="mi" id="MathJax-Span-16207" style="font-size: 70.7%; font-family: MathJax_Math-italic;">w</span><span style="display: inline-block; width: 0px; height: 4.002em;"></span></span><span style="position: absolute; clip: rect(0.853em 1000.9em 1.203em -999.998em); top: -1.248em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.903em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.052em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.302em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.497em; border-left: 0px solid; width: 0px; height: 1.691em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><msub><mi>a</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>+</mo><mrow class="MJX-TeXAtom-ORD"><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub><mo>∗</mo><mi>cos</mi><mo>⁡</mo><mi>n</mi><mi>w</mi><mi>x</mi><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mo>∗</mo><mi>sin</mi><mo>⁡</mo><mi>n</mi><mi>w</mi><mi>x</mi></mrow><mo>,</mo><mi>T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>w</mi></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-506">f(x)=\frac {a_ 0} {2} + {\sum_{n=1}^\infty a _n * \cos nwx + b _n* \sin nwx }  , T =  \frac {2 \pi}{w}</script></p>
+
+<p>明显看出，w越大，周期越小；</p>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "fft2.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
